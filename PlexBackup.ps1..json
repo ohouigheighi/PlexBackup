@@ -2,7 +2,7 @@
     "_meta": {
         "version": "1.0",
         "strict": false,
-        "description": "Sample run-time settings for the PlexBackup.ps1 script."
+        "description": "slobo PMS PlexBackup script settings."
     },
     "Mode": {
         "_meta": {
@@ -28,7 +28,7 @@
         "_meta": {
             "default": "$PSScriptRoot"
         },
-        "value": null
+        "value": "\\\\slobo-wrtax88u.slbhm\\raid1\\pms.backup\\slobo-pms"
     },
     "BackupDir": {
         "_meta": {
@@ -62,7 +62,8 @@
         "_meta": {
             "default": "None,Error,Warning,Info,Debug"
         },
-        "value": null
+        // "value": null
+        "value": "Info"
     },
     "Log": {
         "value": true
@@ -123,23 +124,27 @@
             "set": "Never,Always,OnError,OnSuccess,OnBackup,OnBackupError,OnBackupSuccess,OnRestore,OnRestoreError,OnRestoreSuccess",
             "default": "Never"
         },
-        "value": null
+        // "value": null
+        "value": "Always"
     },
     "SmtpServer": {
-        "value": "smtp.gmail.com"
+        "value": "smtpout.secureserver.net"
     },
     "Port": {
         "_meta": {
             "range": "0-[int]::MaxValue",
             "default": "0"
         },
-        "value": 587
+        // "value": 587
+        "value": 465
     },
     "From": {
-        "value": null
+        // "value": null
+        "value": "slbhm@cowsteak.org"
     },
     "To": {
-        "value": null
+        // "value": null
+        "value": "muelmi@live.com"
     },
     "NoSsl": {
         "value": null
