@@ -1,0 +1,227 @@
+{
+    "_meta": {
+        "version": "1.0",
+        "strict": false,
+        "description": "Sample run-time settings for the PlexBackup.ps1 script."
+    },
+    "Mode": {
+        "_meta": {
+            "set": "Backup,Continue,Restore",
+            "default": "Backup"
+        },
+        "value": null
+    },
+    "Type": {
+        "_meta": {
+            "set": ",7zip,Robocopy",
+            "default": ""
+        },
+        "value": null
+    },
+    "PlexAppDataDir": {
+        "_meta": {
+            "default": "$env:LOCALAPPDATA\\Plex Media Server"
+        },
+        "value": null
+    },
+    "BackupRootDir": {
+        "_meta": {
+            "default": "$PSScriptRoot"
+        },
+        "value": null
+    },
+    "BackupDir": {
+        "_meta": {
+            "default": null
+        },
+        "value": null
+    },
+    "TempDir": {
+        "_meta": {
+            "default": "$env:TEMP"
+        },
+        "hasValue": true,
+        "value": null
+    },
+    "WakeUpDir": {
+        "_meta": {
+            "default": null
+        },
+        "value": null
+    },
+    "ArchiverPath": {
+        "_meta": {
+            "default": "$env:ProgramFiles\\7-Zip\\7z.exe"
+        },
+        "value": null
+    },
+    "Quiet": {
+        "value": null
+    },
+    "LogLevel": {
+        "_meta": {
+            "default": "None,Error,Warning,Info,Debug"
+        },
+        "value": null
+    },
+    "Log": {
+        "value": true
+    },
+    "LogFile": {
+        "value": null
+    },
+    "ErrorLog": {
+        "value": null
+    },
+    "ErrorLogFile": {
+        "value": null
+    },
+    "Keep": {
+        "_meta": {
+            "range": "0-[int]::MaxValue",
+            "default": "3"
+        },
+        "value": null
+    },
+    "Retries": {
+        "_meta": {
+            "range": "0-[int]::MaxValue",
+            "default": "5"
+        },
+        "value": null
+    },
+    "RetryWaitSec": {
+        "_meta": {
+            "range": "0-[int]::MaxValue",
+            "default": "10"
+        },
+        "value": null
+    },
+    "RawOutput": {
+        "value": null
+    },
+    "Inactive": {
+        "value": null
+    },
+    "NoRestart": {
+        "value": null
+    },
+    "NoSingleton": {
+        "value": null
+    },
+    "NoVersion": {
+        "value": null
+    },
+    "NoLogo": {
+        "value": null
+    },
+    "Test": {
+        "value": false
+    },
+    "SendMail": {
+        "_meta": {
+            "set": "Never,Always,OnError,OnSuccess,OnBackup,OnBackupError,OnBackupSuccess,OnRestore,OnRestoreError,OnRestoreSuccess",
+            "default": "Never"
+        },
+        "value": null
+    },
+    "SmtpServer": {
+        "value": "smtp.gmail.com"
+    },
+    "Port": {
+        "_meta": {
+            "range": "0-[int]::MaxValue",
+            "default": "0"
+        },
+        "value": 587
+    },
+    "From": {
+        "value": null
+    },
+    "To": {
+        "value": null
+    },
+    "NoSsl": {
+        "value": null
+    },
+    "CredentialFile": {
+        "value": null
+    },
+    "NoCredential": {
+        "value": null
+    },
+    "Anonymous": {
+        "value": null
+    },
+    "SendLogFile": {
+        "_meta": {
+            "set": "Never,OnError,OnSuccess,Always",
+            "default": "Never"
+        },
+        "value": "OnError"
+    },
+    "Logoff": {
+        "value": null
+    },
+    "Reboot": {
+        "value": null
+    },
+    "ForceReboot": {
+        "value": null
+    },
+    "ExcludeDirs": {
+        "_meta": {
+            "default": ["Diagnostics","Crash Reports","Updates","Logs"]
+        },
+        "value": null
+    },
+    "ExcludeFiles": {
+        "_meta": {
+            "default": ["*.bif"]
+        },
+        "value": null
+    },
+    "SpecialDirs": {
+        "_meta": {
+            "default": ["Plug-in Support\\Data\\com.plexapp.system\\DataItems\\Deactivated"]
+        },
+        "value": null
+    },
+    "PlexServiceName": {
+        "_meta": {
+            "default": "^Plex"
+        },
+        "hasValue": false,
+        "value": null
+    },
+    "PlexServerFileName": {
+        "_meta": {
+            "default": "Plex Media Server.exe"
+        },
+        "value": null
+    },
+    "PlexServerPath": {
+        "value": null
+    },
+    "ArchiverOptionsCompress": {
+        "_meta": {
+            "comment": "The default options will always be applied. To include additional options, define them as an array.",
+            "default": ["-r","-y"]
+        },
+        "value": null
+    },
+    "ArchiverOptionsExpand": {
+        "_meta": {
+            "comment": "The default options will always be applied. To include additional options, define them as an array.",
+            "default":  ["-aoa","-y"]
+        },
+        "value": null
+    },
+    "Machine": {
+        "_meta": {
+            "set": "x86,amd64",
+            "default": null
+        },
+        "value": null
+    }
+}
