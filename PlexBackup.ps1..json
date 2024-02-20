@@ -62,7 +62,6 @@
         "_meta": {
             "default": "None,Error,Warning,Info,Debug"
         },
-        // "value": null
         "value": "Info"
     },
     "Log": {
@@ -124,7 +123,6 @@
             "set": "Never,Always,OnError,OnSuccess,OnBackup,OnBackupError,OnBackupSuccess,OnRestore,OnRestoreError,OnRestoreSuccess",
             "default": "Never"
         },
-        // "value": null
         "value": "Always"
     },
     "SmtpServer": {
@@ -135,15 +133,12 @@
             "range": "0-[int]::MaxValue",
             "default": "0"
         },
-        // "value": 587
         "value": 465
     },
     "From": {
-        // "value": null
         "value": "slbhm@cowsteak.org"
     },
     "To": {
-        // "value": null
         "value": "muelmi@live.com"
     },
     "NoSsl": {
