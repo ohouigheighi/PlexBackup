@@ -74,7 +74,7 @@
         "value": null
     },
     "ErrorLogFile": {
-        "value": "C:\\Users\\muelm\\.scripts\\PlexBackup\\Logs\\log.out"
+        "value": null
     },
     "Keep": {
         "_meta": {
@@ -133,7 +133,7 @@
             "range": "0-[int]::MaxValue",
             "default": "0"
         },
-        "value": 465
+        "value": "587"
     },
     "From": {
         "value": "info@cowsteak.org"
@@ -145,7 +145,7 @@
         "value": null
     },
     "CredentialFile": {
-        "value": "smtpCredentials.xml"
+        "value": "C:\\Users\\muelm\\.scripts\\PlexBackup\\smtpCredentials.xml"
     },
     "NoCredential": {
         "value": null
