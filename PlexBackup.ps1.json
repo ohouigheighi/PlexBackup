@@ -145,7 +145,7 @@
         "value": null
     },
     "CredentialFile": {
-        "value": null
+        "value": "smtpCredentials.xml"
     },
     "NoCredential": {
         "value": null

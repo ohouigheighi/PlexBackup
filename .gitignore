@@ -1,5 +1,6 @@
 # PlexBackup.ps1.json
 # PlexBackup.ps1.xml
 $zipFilePath.zip
+smtpCredentials.xml
 Logs
 Logs/*
