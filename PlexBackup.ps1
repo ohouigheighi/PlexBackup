@@ -244,12 +244,12 @@ Intends to overcome an infrequent error "87: The parameter is incorrect" returne
 Keep in mind that these refer to the architecture of the Plex Media Server executable, not to the computer on which it runs, so for the 32-bit version of the server, use 'x86' and for the 64-bit version, use 'amd64'. Do not use this flag if you do not get error 87.
 
 .NOTES
-Version    : 2.1.7
+Version    : 2.1.9
 Author     : Alek Davis
-Created on : 2023-12-25
+Created on : 2024-04-08
 License    : MIT License
 LicenseLink: https://github.com/alekdavis/PlexBackup/blob/master/LICENSE
-Copyright  : (c) Alek Davis
+Copyright  : (c) 2024 Alek Davis
 
 .LINK
 https://github.com/alekdavis/PlexBackup
@@ -1235,8 +1235,11 @@ function Prologue {
         Write-LogInfo (GetScriptVersion)
     }
 
-    Write-LogInfo "Script started at:"
+    Write-LogInfo "Running as:"
     Write-LogInfo $Script:StartTime -Indent 1
+
+    Write-LogInfo "Script started at:"
+    Write-LogInfo $env:UserName -Indent 1
 
     # Get script
     $scriptArgs = GetCommandLineArgs
@@ -3708,9 +3711,12 @@ function DecompressFiles {
 
         Write-LogInfo "Restoring Plex app data folders."
 
-        $zipFiles = Get-ChildItem `
-            (Join-Path $Script:BackupDir $SUBDIR_FOLDERS) -File  |
-                Where-Object { $_.Extension -eq $Script:ZipFileExt }
+        $foldersSubDirPath = Join-Path $Script:BackupDir $SUBDIR_FOLDERS
+        $zipFiles = Get-ChildItem $foldersSubDirPath -File  | Where-Object { $_.Extension -eq $Script:ZipFileExt }
+
+        if ($zipFiles.Count -eq 0) {
+            throw "No compressed files with extension '$Script:ZipFileExt' found in the backup folder '$foldersSubDirPath'."
+        }
 
         # Restore each Plex app data subfolder from the corresponding backup archive file.
         foreach ($zipFile in $zipFiles) {
@@ -3897,7 +3903,7 @@ function ProcessBackup {
                 $backupInfo = Get-ChildItem -Recurse -File $dir | Measure-Object -Property Length -Sum
 
                 $Script:ObjectCount = "{0:N0}" -f $backupInfo.Count
-                $Script:BackupSIze  = ([math]::round($backupInfo.Sum /1Gb, 1)).ToString()
+                $Script:BackupSize  = ([math]::round($backupInfo.Sum /1Gb, 1)).ToString()
             }
             catch {
                 Write-LogError "Error calculating backup statistics."
