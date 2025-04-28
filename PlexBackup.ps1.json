@@ -2,7 +2,7 @@
     "_meta": {
         "version": "1.0",
         "strict": false,
-        "description": "slobo PMS PlexBackup script settings."
+        "description": "slobo DOPPLX PlexBackup script settings."
     },
     "Mode": {
         "_meta": {
@@ -28,7 +28,7 @@
         "_meta": {
             "default": "$PSScriptRoot"
         },
-        "value": "\\\\slobo-wrtax88u.slbhm\\raid1\\pms.backup\\slbhm-pms"
+        "value": "\\\\slobo-wrtax88u.slbhm\\raid1\\pms.backup\\slbdopplx"
     },
     "BackupDir": {
         "_meta": {
@@ -71,10 +71,10 @@
         "value": null
     },
     "ErrorLog": {
-        "value": null
+        "value": "C:\\Users\\muelm\\.scripts\\PlexBackup\\Logs\\"
     },
     "ErrorLogFile": {
-        "value": "C:\\Users\\muelm\\.scripts\\PlexBackup\\Logs\\log.out"
+        "value": "C:\\Users\\muelm\\.scripts\\PlexBackup\\Logs\\Errorlog.log"
     },
     "Keep": {
         "_meta": {
