@@ -71,15 +71,15 @@
         "value": null
     },
     "ErrorLog": {
-        "value": "C:\\Users\\muelm\\.scripts\\PlexBackup\\Logs\\"
+        "value": null
     },
     "ErrorLogFile": {
-        "value": "C:\\Users\\muelm\\.scripts\\PlexBackup\\Logs\\Errorlog.log"
+        "value": null
     },
     "Keep": {
         "_meta": {
             "range": "0-[int]::MaxValue",
-            "default": "3"
+            "default": "5"
         },
         "value": null
     },
@@ -133,7 +133,7 @@
             "range": "0-[int]::MaxValue",
             "default": "0"
         },
-        "value": 465
+        "value": 587
     },
     "From": {
         "value": "info@cowsteak.org"
@@ -142,7 +142,7 @@
         "value": "muelmi@live.com"
     },
     "NoSsl": {
-        "value": null
+        "value": false
     },
     "CredentialFile": {
         "value": null
@@ -173,7 +173,7 @@
         "_meta": {
             "default": ["Diagnostics","Crash Reports","Updates","Logs"]
         },
-        "value": null
+        "value": ["Diagnostics","Crash Reports","Updates","Logs","Cache"]
     },
     "ExcludeFiles": {
         "_meta": {
